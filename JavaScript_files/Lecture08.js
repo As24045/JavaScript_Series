@@ -21,7 +21,7 @@ const arr2 = arr.flat(Infinity)
 console.log(Array.isArray("Amit Sharma"))
 console.log(Array.from('Amit sharma'))                 //change in array
 
-console.log(Array.from({name:  'Amit sharma'}))  // if it is not converd in array so givin a empty breaket
+console.log(Array.from({name: 'Amit sharma'}))  // if it is not converd in array so givin a empty breaket
 
 let score = 200;
 let score2 = 300;
