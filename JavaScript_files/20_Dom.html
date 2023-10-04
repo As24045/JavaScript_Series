@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM menuplation</title>
+
+    <style>
+        .bg-black {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body  class="bg-black">
+    <div>
+        <h1 id="title" class="heading">DOM menuplation <span style="display: none;">all about Dom</span></h1>
+        <p >All about the dom</p>
+        <h2> hi i am amit sharma from vijaygir pokhara manpur jaunpur</h2>
+        <h2> hi i am amit sharma from vijaygir pokhara manpur jaunpur</h2>
+        <h2> hi i am amit sharma from vijaygir pokhara manpur jaunpur</h2>
+        <ul>
+            <li class = "item-list">one</li>
+            <li class = "item-list">two</li>
+            <li class = "item-list">three</li>
+            <li class = "item-list">four</li>
+        </ul>
+
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+<!-- out put******************************************************************************************* -->
+
+<!-- title.textContent
+'DOM menuplation all about Dom'
+title.innerContent
+undefined
+title.innerText
+'DOM menuplation'
+title.innerHTML
+'DOM menuplation <span style="display: none;">all about Dom</span>' -->
+
+
+
+<!-- <h2>​ hi i am amit sharma from vijaygir pokhara manpur jaunpur​</h2>​
+document.querySelector('heading')
+null
+document.querySelector('class')
+null
+document.querySelector('.heading')
+<h1 id=​"title" class=​"heading">​…​</h1>​
+document.querySelector('#title')
+<h1 id=​"title" class=​"heading">​…​</h1>​ -->
+
+
+
+<!-- document.querySelector('ul')
+<ul>​…​</ul>​
+let myli = document.querySelector('ul')
+undefined
+myli.qur
+undefined
+myli.querySelector('li')
+<li>​…​</li>​
+let turnGreen = myli.querySelector('li')
+undefined
+turnGreen.style.backgroundColor = "blue"
+'blue' -->
+
+
+<!-- document.querySelectorAll('li')
+NodeList(3) [li, li, li]
+document.querySelectorAll('li')
+NodeList(3) [li, li, li]
+const tempLiList = document.querySelectorAll('li')
+undefined
+tem
+VM4227:1 Uncaught ReferenceError: tem is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM4227:1
+tempLiList
+NodeList(3) [li, li, li]0: li1: li2: lilength: 3[[Prototype]]: NodeList
+
+
+tempLiList[0].style.color = 'red'
+'red' -->
+
+
+
+<!-- document.getElementsByClassName('item-list')
+
+let tempList = document.getElementsByClassName('item-list')
+undefined
+te
+VM6227:1 Uncaught ReferenceError: te is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM6227:1
+tempList
+HTMLCollection(4) 
+Array.from(tempList)                                    //////////////////////// change in to array
+(4) [li.item-list, li.item-list
+let myConvertedArray = Array.from(tempList)
+undefined
+myConvertedArray
+(4) [li.item-list, li.item-list, li.item-list, li.item-list]
+myConvertedArray.forEach( (li) =>{
+    li.style.color = "blue"
+})
+undefined -->
