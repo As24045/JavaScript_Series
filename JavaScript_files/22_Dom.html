@@ -29,7 +29,27 @@
 
     }
     addOptiLanguage('Html');
-    
+
+    //Edit *************************************************************************************************************************
+
+    const secondLine = document.querySelector("li:nth-child(2)")
+    //secondLine.innerHTML = "mojo";
+
+    const newli = document.createElement('li')
+    newli.textContent = 'mojo';
+    secondLine.replaceWith(newli);
+
+    // second
+
+    const firstLine = document.querySelector("li:first-child");
+    firstLine.outerHTML = "<li>Typescript</li>";
+
+
+    //remove
+
+    const lastLine = document.querySelector("li:last-child");
+    lastLine.remove();
+
 
 </script>
 </html>
