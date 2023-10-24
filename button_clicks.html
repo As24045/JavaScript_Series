@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+
+        form{
+            text-align: center;
+            margin-top: 15%;
+            border: 1px solid yellow;
+            margin-left: 20vw;
+            margin-right: 20vw;
+            padding-top: 50px;
+            padding-bottom: 30px;
+            text-transform: capitalize;
+            padding-right: 70px;
+            padding-left: 70px;
+        }
+        .results {
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+    </style>
+  </head>
+  <body style="background-color: grey; color: aliceblue">
+    <div class="container">
+      <form action="" class="form-horizontal">
+        <h2>Multyple button</h2>
+        <div class="form-group">
+          <label>First Value</label>
+          <input class="form-control" type="text" name="val1" id="val1" />
+        </div>
+        <div class="form-group">
+          <label>Second Value</label>
+          <input class="form-control" type="text" name="val2" id="val2" />
+        </div class="button">
+        <button class="btn btn-success" type="submit" id="add">ADD</button>
+        <button class="btn btn-success" type="submit" id="sub">Subtraction</button>
+        <button class="btn btn-success" type="submit" id="mul">miltyply</button>
+        <button class="btn btn-success" type="submit" id="divs">Divide</button>
+        <p class="results"></p>
+      </form>
+    </div>
+  </body>
+  <script>
+    let results = document.querySelector(".results");
+
+    let add = document.querySelector("#add");
+    let sub = document.querySelector("#sub");
+    let mul = document.querySelector("#mul");
+    let divs = document.querySelector("#divs");
+
+    add.addEventListener("click", function (event) {
+      event.preventDefault();
+      let val1 = parseInt(document.querySelector("#val1").value);
+      let val2 = parseInt(document.querySelector("#val2").value);
+
+      if (isNaN(val1) || isNaN(val2)) {
+        results.textContent = `please Enter the vailed number `;
+      } else {
+        const sum = val1 + val2;
+        results.textContent = `The Sum of two number is ${sum}`;
+      }
+    });
+
+    sub.addEventListener("click", function (event) {
+      event.preventDefault();
+      let val1 = parseInt(document.querySelector("#val1").value);
+      let val2 = parseInt(document.querySelector("#val2").value);
+
+      if (isNaN(val1) || isNaN(val2)) {
+        results.textContent = `please Enter the vailed number `;
+      } else {
+        const sub = val1 - val2;
+        results.textContent = `The Sum of two number is ${sub}`;
+      }
+    });
+
+    mul.addEventListener("click", function (event) {
+      event.preventDefault();
+      let val1 = parseInt(document.querySelector("#val1").value);
+      let val2 = parseInt(document.querySelector("#val2").value);
+
+      if (isNaN(val1) || isNaN(val2)) {
+        results.textContent = `please Enter the vailed number `;
+      } else {
+        const mul = val1 * val2;
+        results.textContent = `The Sum of two number is ${mul}`;
+      }
+    });
+
+    divs.addEventListener("click", function (event) {
+      event.preventDefault();
+      let val1 = parseInt(document.querySelector("#val1").value);
+      let val2 = parseInt(document.querySelector("#val2").value);
+
+      if (isNaN(val1) || isNaN(val2)) {
+        results.textContent = `please Enter the vailed number `;
+      } else {
+        const divs = val1 / val2;
+        results.textContent = `The Sum of two number is ${divs}`;
+      }
+    });
+
+    
+  </script>
+</html>
